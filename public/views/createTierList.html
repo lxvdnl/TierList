@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Create tier list</title>
+    <link rel="stylesheet" type="text/css" href="tierList.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <link rel="icon" href="logo/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="logo/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- header Menu container-->
+    <%- include("ejsModules/menu.ejs") %>
+
+    <!-- #region Main content -->
+    <div class="contentDiv disableTextSelection">
+      <% if (!buttonVisible) { %>
+      <form
+        action="/tierListCreated"
+        method="post"
+        enctype="multipart/form-data"
+        id="uploadForm"
+        class="createTierListForm"
+      >
+        <nav>
+          <label for="enterTierListName">Tier list name</label>
+          <input
+            type="text"
+            id="enterTierListName"
+            name="tierListName"
+            maxlength="35"
+            required
+          />
+        </nav>
+
+        <div
+          id="dropArea"
+          onclick="document.getElementById('fileInput').click()"
+        >
+          Drop imgs here or click to select from the file system
+        </div>
+
+        <input
+          type="file"
+          id="fileInput"
+          name="imgSet"
+          accept=".jpg, .png, .jpeg"
+          multiple
+          required
+        />
+
+        <input type="submit" value="Create tier list" id="createButton" />
+      </form>
+      <% } %> <% if (buttonVisible) { %>
+      <a href="/tierList?tierListName=<%= tierListName %>">
+        <button id="goToTierList">Go to tier list</button>
+      </a>
+      <% } %>
+    </div>
+
+    <script src="../scripts/createTierList.js" defer></script>
+
+    <!-- #endregion -->
+
+    <!-- Footer container-->
+    <%- include("ejsModules/footer.ejs") %>
+  </body>
+</html>

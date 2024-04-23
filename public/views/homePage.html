@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tier list</title>
+    <link rel="stylesheet" type="text/css" href="tierList.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <link rel="icon" href="logo/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="logo/favicon.png" type="image/x-icon" />
+
+    <script src="../scripts/homePage.js" defer></script>
+  </head>
+  <body>
+    <form class="formSearchTearList" action="tierList" method="get">
+      <input
+        class="inputChoise"
+        type="text"
+        list="tierLists"
+        name="tierListName"
+        maxlength="35"
+      />
+      <datalist id="tierLists">
+        <% allTierListsInfo.forEach(function(tierListInfo) { %>
+        <option><%= tierListInfo.fileName %></option>
+        <% }) %>
+      </datalist>
+      <button type="submit" class="inputChoiseSearchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <!-- header Menu container-->
+    <%- include("ejsModules/menu.ejs") %>
+
+    <!-- #region Main content -->
+    <div class="contentDiv">
+      <% allTierListsInfo.forEach(function(tierListInfo) { %>
+      <a href="/tierList?tierListName=<%= tierListInfo.fileName %>">
+        <div class="oneTierListSet">
+          <label><%= tierListInfo.fileName %></label>
+          <div class="horizontalScrollDiv disableTextSelection scrollable">
+            <% tierListInfo.imgNames.forEach(function(imgName) { %>
+            <img src="./imgSets/<%= tierListInfo.fileName %>/<%= imgName %>" />
+            <% }) %>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+    <!-- #endregion -->
+
+    <!-- Footer container-->
+    <%- include("ejsModules/footer.ejs") %>
+  </body>
+</html>

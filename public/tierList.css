@@ -1,0 +1,453 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(96, 157, 159);
+  text-align: center;
+}
+
+.disableTextSelection {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contentDiv {
+  max-width: 1170px;
+  margin: 20px auto;
+  padding: 0 10px;
+  flex: 1;
+}
+
+@media (max-width: 1170px) {
+  .contentDiv {
+    width: 90%;
+  }
+}
+
+/* #region Home page content styles */
+
+.horizontalScrollDiv {
+  padding: 0 1%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 0px));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100px, 1fr);
+  overflow: scroll;
+  margin-top: 15px;
+  cursor: grab;
+}
+
+.horizontalScrollDiv:active {
+  cursor: grabbing;
+}
+
+.horizontalScrollDiv::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.horizontalScrollDiv img {
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.4);
+}
+
+.oneTierListSet label {
+  font-size: 25px;
+  margin-left: 40px;
+  color: rgb(211, 232, 230);
+  cursor: pointer;
+}
+
+.oneTierListSet {
+  padding: 15px 2.7%;
+  border-radius: 10px;
+  border: 1px solid rgb(73, 138, 129);
+  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.oneTierListSet:hover {
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* #endregion */
+
+/* #region  Create tier list content styles*/
+
+#createButton {
+  width: 200px;
+  border-radius: 10px;
+  color: white;
+  padding: 12px;
+  background-color: rgb(96, 157, 159);
+  border: 1px solid rgb(73, 138, 129);
+  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-size: 19px;
+}
+
+#createButton:hover {
+  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.4);
+}
+
+#uploadForm nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 80%;
+}
+
+#enterTierListName,
+label[for="enterTierListName"] {
+  display: inline-block;
+}
+
+label[for="enterTierListName"] {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+@media (max-width: 680px) {
+  label[for="enterTierListName"] {
+    display: none;
+  }
+}
+
+#enterTierListName {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  background-color: rgb(186, 216, 218);
+  border-radius: 10px;
+  padding: 4px 10px;
+  border: 0;
+  background: #dde4e6;
+  color: rgb(51, 50, 50);
+  font-size: 20px;
+}
+
+#enterTierListName:hover {
+  box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.4);
+}
+
+#dropArea {
+  background-color: rgb(123, 172, 174);
+  width: 100%;
+  height: 200px;
+  border: 2px dashed rgb(73, 138, 129);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+  cursor: pointer;
+  font-size: 25px;
+  color: rgb(226, 238, 236);
+  transition:
+    background-color 0.8s ease,
+    color 0.6s ease;
+}
+
+#dropArea:hover {
+  box-shadow: 0 0 7px -2px rgba(0, 0, 0, 0.4);
+}
+
+#dropArea.active {
+  background-color: rgb(96, 157, 159);
+  color: rgb(152, 169, 168);
+}
+
+.createTierListForm {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgb(73, 138, 129);
+  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (max-width: 960px) {
+  .createTierListForm {
+    width: auto;
+  }
+}
+
+@media (max-width: 260px) {
+  #createButton {
+    width: auto;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  #dropArea {
+    font-size: 15px;
+    color: rgb(226, 238, 236);
+    transition: background-color 0.8s ease;
+  }
+}
+
+@media (max-width: 170px) {
+  #dropArea {
+    font-size: 0;
+  }
+}
+
+#fileInput {
+  display: none;
+}
+
+#goToTierList {
+  margin-top: 30%;
+  width: 230px;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  background-color: rgb(96, 157, 159);
+  border: 1px solid rgb(73, 138, 129);
+  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-size: 19px;
+}
+
+#goToTierList:hover {
+  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* #endregion */
+
+/* #region  Help content styles*/
+
+#helpTextAreaDiv {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* #endregion */
+
+/* #region Menu styles */
+
+.menuNav {
+  background-color: rgb(73, 138, 129);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 12px 50px;
+  font-size: 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.4);
+}
+
+.menuNav:hover {
+  cursor: default;
+  box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.4);
+}
+
+.menuTitle {
+  order: 1;
+}
+
+.menuList {
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 470px) {
+  .menuList {
+    display: none;
+  }
+}
+
+.menuNav ul li {
+  list-style-type: none;
+  float: left;
+  margin-left: 15px;
+}
+
+.menuItem {
+  margin-right: 10px;
+}
+
+.menuLink {
+  color: white;
+}
+
+.menuLink li:hover {
+  text-decoration: underline #ccc;
+}
+
+.formSearchTearList {
+  position: absolute;
+  left: 150px;
+  top: 12px;
+  max-width: 350px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.inputChoise {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  padding: 4px 10px;
+  border: 0;
+  background: #ffffff !important;
+  outline: none;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.inputChoiseSearchButton {
+  background-color: rgb(73, 138, 129);
+  border: none;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .inputChoise,
+  .inputChoiseSearchButton {
+    display: none;
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* #endregion */
+
+/* #region Footer styles */
+
+.footerDistributed {
+  background-color: #292c2f;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 40px 50px;
+  border-radius: 8px 8px 0 0;
+  margin-top: auto;
+}
+
+.footerDistributed:hover {
+  cursor: default;
+}
+
+.footerDistributed .footerLeft p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footerDistributed p.footerLinks {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease 0.25s;
+}
+
+.footerDistributed p.footerLinks a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease 0.25s;
+}
+
+.footerDistributed .footerLinks a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footerDistributed .footerLinks .footerFirstLink:before {
+  content: none;
+}
+
+.footerDistributed .footerRight {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footerDistributed .footerRight a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition: all 0.25s;
+}
+
+.footerDistributed .footerRight a:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.footerDistributed p.footerLinks a:hover {
+  text-decoration: underline #ccc;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.faVk:before {
+  content: "\f189";
+}
+
+.faGithub:before {
+  content: "\f09b";
+}
+
+/* #endregion */
