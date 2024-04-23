@@ -1,11 +1,11 @@
-name: Prettier Formatting
+name: Prettier Check
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  prettier-format:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,5 +15,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Format files with Prettier
-        run: npx prettier --write "**/*.{js,html,css}"
+      - name: Check Prettier formatting
+        run: npx prettier --check "**/*.{js,html,css}"
