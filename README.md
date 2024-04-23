@@ -1,5 +1,5 @@
 # TierList Repository
-## Installation
+## 1. Installation
 To set up the project, follow these steps:
 1. Make sure you have Node.js installed.
 2. Navigate to the project directory in your terminal.
@@ -9,7 +9,7 @@ To set up the project, follow these steps:
    cd TierList
    npm install
    ```
-## Run the server
+## 2.  Run the server
 To run the server use:
   ```
   node server.js
