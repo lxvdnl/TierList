@@ -16,20 +16,20 @@
     <%- include("ejsModules/menu.ejs") %>
 
     <!-- #region Main content -->
-    <div class="contentDiv disableTextSelection">
+    <div class="content-div disable-text-selection">
       <% if (!buttonVisible) { %>
       <form
         action="/tierListCreated"
         method="post"
         enctype="multipart/form-data"
-        id="uploadForm"
-        class="createTierListForm"
+        id="upload-form"
+        class="create-tier-list-form"
       >
         <nav>
-          <label for="enterTierListName">Tier list name</label>
+          <label for="enter-tier-list-name">Tier list name</label>
           <input
             type="text"
-            id="enterTierListName"
+            id="enter-tier-list-name"
             name="tierListName"
             maxlength="35"
             required
@@ -37,26 +37,26 @@
         </nav>
 
         <div
-          id="dropArea"
-          onclick="document.getElementById('fileInput').click()"
+          id="drop-area"
+          onclick="document.getElementById('file-input').click()"
         >
           Drop imgs here or click to select from the file system
         </div>
 
         <input
           type="file"
-          id="fileInput"
+          id="file-input"
           name="imgSet"
           accept=".jpg, .png, .jpeg"
           multiple
           required
         />
 
-        <input type="submit" value="Create tier list" id="createButton" />
+        <input type="submit" value="Create tier list" id="create-button" />
       </form>
       <% } %> <% if (buttonVisible) { %>
       <a href="/tierList?tierListName=<%= tierListName %>">
-        <button id="goToTierList">Go to tier list</button>
+        <button id="go-to-tier-list">Go to tier list</button>
       </a>
       <% } %>
     </div>

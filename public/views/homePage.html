@@ -14,9 +14,9 @@
     <script src="../scripts/homePage.js" defer></script>
   </head>
   <body>
-    <form class="formSearchTearList" action="tierList" method="get">
+    <form class="form-search-tear-list" action="tierList" method="get">
       <input
-        class="inputChoise"
+        class="input-choise"
         type="text"
         list="tierLists"
         name="tierListName"
@@ -27,7 +27,7 @@
         <option><%= tierListInfo.fileName %></option>
         <% }) %>
       </datalist>
-      <button type="submit" class="inputChoiseSearchButton">
+      <button type="submit" class="input-choise-search-button">
         <i class="fa fa-search"></i>
       </button>
     </form>
@@ -36,12 +36,12 @@
     <%- include("ejsModules/menu.ejs") %>
 
     <!-- #region Main content -->
-    <div class="contentDiv">
+    <div class="content-div">
       <% allTierListsInfo.forEach(function(tierListInfo) { %>
       <a href="/tierList?tierListName=<%= tierListInfo.fileName %>">
-        <div class="oneTierListSet">
+        <div class="one-tier-list-set">
           <label><%= tierListInfo.fileName %></label>
-          <div class="horizontalScrollDiv disableTextSelection scrollable">
+          <div class="horizontal-scroll-div disable-text-selection scrollable">
             <% tierListInfo.imgNames.forEach(function(imgName) { %>
             <img src="./imgSets/<%= tierListInfo.fileName %>/<%= imgName %>" />
             <% }) %>

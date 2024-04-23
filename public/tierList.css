@@ -12,11 +12,11 @@ body {
   text-align: center;
 }
 
-.disableTextSelection {
+.disable-text-selection {
   user-select: none;
 }
 
-.contentDiv {
+.content-div {
   max-width: 1170px;
   margin: 20px auto;
   padding: 0 10px;
@@ -24,14 +24,14 @@ body {
 }
 
 @media (width <= 1170px) {
-  .contentDiv {
+  .content-div {
     width: 90%;
   }
 }
 
 /* #region Home page content styles */
 
-.horizontalScrollDiv {
+.horizontal-scroll-div {
   padding: 0 1%;
   display: grid;
   grid-gap: 10px;
@@ -43,16 +43,16 @@ body {
   cursor: grab;
 }
 
-.horizontalScrollDiv:active {
+.horizontal-scroll-div:active {
   cursor: grabbing;
 }
 
-.horizontalScrollDiv::-webkit-scrollbar {
+.horizontal-scroll-div::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.horizontalScrollDiv img {
+.horizontal-scroll-div img {
   width: 100px;
   height: 100px;
   pointer-events: none;
@@ -60,14 +60,14 @@ body {
   box-shadow: 0 1px 3px -2px rgb(0 0 0 / 40%);
 }
 
-.oneTierListSet label {
+.one-tier-list-set label {
   font-size: 25px;
   margin-left: 40px;
   color: rgb(211 232 230);
   cursor: pointer;
 }
 
-.oneTierListSet {
+.one-tier-list-set {
   padding: 15px 2.7%;
   border-radius: 10px;
   border: 1px solid rgb(73 138 129);
@@ -77,7 +77,7 @@ body {
   text-align: left;
 }
 
-.oneTierListSet:hover {
+.one-tier-list-set:hover {
   box-shadow: 0 0 6px 1px rgb(0 0 0 / 40%);
 }
 
@@ -85,7 +85,7 @@ body {
 
 /* #region  Create tier list content styles */
 
-#createButton {
+#create-button {
   width: 200px;
   border-radius: 10px;
   color: white;
@@ -97,34 +97,34 @@ body {
   font-size: 19px;
 }
 
-#createButton:hover {
+#create-button:hover {
   box-shadow: 0 0 8px -1px rgb(0 0 0 / 40%);
 }
 
-#uploadForm nav {
+#upload-form nav {
   display: flex;
   align-items: center;
   white-space: nowrap;
   width: 80%;
 }
 
-#enterTierListName,
-label[for="enterTierListName"] {
+#enter-tier-list-name,
+label[for="enter-tier-list-name"] {
   display: inline-block;
 }
 
-label[for="enterTierListName"] {
+label[for="enter-tier-list-name"] {
   margin-right: 20px;
   font-size: 24px;
 }
 
 @media (width <= 680px) {
-  label[for="enterTierListName"] {
+  label[for="enter-tier-list-name"] {
     display: none;
   }
 }
 
-#enterTierListName {
+#enter-tier-list-name {
   width: 100%;
   text-align: center;
   outline: none;
@@ -132,16 +132,15 @@ label[for="enterTierListName"] {
   border-radius: 10px;
   padding: 4px 10px;
   border: 0;
-  background: #dde4e6;
   color: rgb(51 50 50);
   font-size: 20px;
 }
 
-#enterTierListName:hover {
+#enter-tier-list-name:hover {
   box-shadow: 0 0 9px -2px rgb(0 0 0 / 40%);
 }
 
-#dropArea {
+#drop-area {
   background-color: rgb(123 172 174);
   width: 100%;
   height: 200px;
@@ -159,16 +158,16 @@ label[for="enterTierListName"] {
     color 0.6s ease;
 }
 
-#dropArea:hover {
+#drop-area:hover {
   box-shadow: 0 0 7px -2px rgb(0 0 0 / 40%);
 }
 
-#dropArea.active {
+#drop-area.active {
   background-color: rgb(96 157 159);
   color: rgb(152 169 168);
 }
 
-.createTierListForm {
+.create-tier-list-form {
   margin: 40px auto;
   display: flex;
   flex-direction: column;
@@ -184,19 +183,19 @@ label[for="enterTierListName"] {
 }
 
 @media (width <= 960px) {
-  .createTierListForm {
+  .create-tier-list-form {
     width: auto;
   }
 }
 
 @media (width <= 260px) {
-  #createButton {
+  #create-button {
     width: auto;
     font-size: 15px;
     padding: 8px;
   }
 
-  #dropArea {
+  #drop-area {
     font-size: 15px;
     color: rgb(226 238 236);
     transition: background-color 0.8s ease;
@@ -204,16 +203,16 @@ label[for="enterTierListName"] {
 }
 
 @media (width <= 170px) {
-  #dropArea {
+  #drop-area {
     font-size: 0;
   }
 }
 
-#fileInput {
+#file-input {
   display: none;
 }
 
-#goToTierList {
+#go-to-tier-list {
   margin-top: 30%;
   width: 230px;
   border-radius: 10px;
@@ -226,7 +225,7 @@ label[for="enterTierListName"] {
   font-size: 19px;
 }
 
-#goToTierList:hover {
+#go-to-tier-list:hover {
   box-shadow: 0 0 8px -1px rgb(0 0 0 / 40%);
 }
 
@@ -234,7 +233,7 @@ label[for="enterTierListName"] {
 
 /* #region  Help content styles */
 
-#helpTextAreaDiv {
+#help-text-area-div {
   width: 100%;
   max-width: 1000px;
   height: 100%;
@@ -248,7 +247,7 @@ label[for="enterTierListName"] {
 
 /* #region Menu styles */
 
-.menuNav {
+.menu-nav {
   background-color: rgb(73 138 129);
   display: flex;
   justify-content: space-between;
@@ -260,16 +259,16 @@ label[for="enterTierListName"] {
   box-shadow: 0 3px 6px -2px rgb(0 0 0 / 40%);
 }
 
-.menuNav:hover {
+.menu-nav:hover {
   cursor: default;
   box-shadow: 0 3px 9px -2px rgb(0 0 0 / 40%);
 }
 
-.menuTitle {
+.menu-title {
   order: 1;
 }
 
-.menuList {
+.menu-list {
   order: 2;
   display: flex;
   justify-content: flex-end;
@@ -279,30 +278,30 @@ label[for="enterTierListName"] {
 }
 
 @media (width <= 470px) {
-  .menuList {
+  .menu-list {
     display: none;
   }
 }
 
-.menuNav ul li {
+.menu-nav ul li {
   list-style-type: none;
   float: left;
   margin-left: 15px;
 }
 
-.menuItem {
+.menu-item {
   margin-right: 10px;
 }
 
-.menuLink {
+.menu-link {
   color: white;
 }
 
-.menuLink li:hover {
+.menu-link li:hover {
   text-decoration: underline #ccc;
 }
 
-.formSearchTearList {
+.form-search-tear-list {
   position: absolute;
   left: 150px;
   top: 12px;
@@ -313,7 +312,7 @@ label[for="enterTierListName"] {
   white-space: nowrap;
 }
 
-.inputChoise {
+.input-choise {
   width: 100%;
   height: 100%;
   border-radius: 6px;
@@ -325,7 +324,7 @@ label[for="enterTierListName"] {
   margin-right: 8px;
 }
 
-.inputChoiseSearchButton {
+.input-choise-search-button {
   background-color: rgb(73 138 129);
   border: none;
   color: white;
@@ -334,8 +333,8 @@ label[for="enterTierListName"] {
 }
 
 @media (width <= 720px) {
-  .inputChoise,
-  .inputChoiseSearchButton {
+  .input-choise,
+  .input-choise-search-button {
     display: none;
   }
 }
@@ -348,7 +347,7 @@ input::-webkit-calendar-picker-indicator {
 
 /* #region Footer styles */
 
-.footerDistributed {
+.footer-distributed {
   background-color: #292c2f;
   box-shadow: 0 3px 10px -2px rgb(0 0 0 / 40%);
   box-sizing: border-box;
@@ -360,17 +359,17 @@ input::-webkit-calendar-picker-indicator {
   margin-top: auto;
 }
 
-.footerDistributed:hover {
+.footer-distributed:hover {
   cursor: default;
 }
 
-.footerDistributed .footerLeft p {
+.footer-distributed .footer-left p {
   color: #8f9296;
   font-size: 14px;
   margin: 0;
 }
 
-.footerDistributed p.footerLinks {
+.footer-distributed .footer-links {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -379,7 +378,7 @@ input::-webkit-calendar-picker-indicator {
   transition: ease 0.25s;
 }
 
-.footerDistributed p.footerLinks a {
+.footer-distributed .footer-links a {
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
@@ -387,7 +386,7 @@ input::-webkit-calendar-picker-indicator {
   transition: ease 0.25s;
 }
 
-.footerDistributed .footerLinks a::before {
+.footer-distributed .footer-links a::before {
   content: "·";
   font-size: 20px;
   left: 0;
@@ -396,17 +395,17 @@ input::-webkit-calendar-picker-indicator {
   padding-right: 5px;
 }
 
-.footerDistributed .footerLinks .footerFirstLink::before {
+.footer-distributed .footer-links .footer-first-link::before {
   content: none;
 }
 
-.footerDistributed .footerRight {
+.footer-distributed .footer-right {
   float: right;
   margin-top: 6px;
   max-width: 180px;
 }
 
-.footerDistributed .footerRight a {
+.footer-distributed .footer-right a {
   display: inline-block;
   width: 35px;
   height: 35px;
@@ -420,29 +419,19 @@ input::-webkit-calendar-picker-indicator {
   transition: all 0.25s;
 }
 
-.footerDistributed .footerRight a:hover {
-  transform: scale(1.1);
+.footer-distributed .footer-right a:hover {
   transform: scale(1.1);
 }
 
-.footerDistributed p.footerLinks a:hover {
+.footer-distributed p.footer-links a:hover {
   text-decoration: underline #ccc;
 }
 
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.faVk::before {
+.fa-vk::before {
   content: "\f189";
 }
 
-.faGithub::before {
+.fa-github::before {
   content: "\f09b";
 }
 
