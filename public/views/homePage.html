@@ -38,18 +38,18 @@
     <!-- #region Main content -->
     <div class="contentDiv">
       <% allTierListsInfo.forEach(function(tierListInfo) { %>
-      <a href="/tierList?tierListName=<%= tierListInfo.fileName %>">
+       <a href="/tierList?tierListName=<%= tierListInfo.fileName %>">
         <div class="oneTierListSet">
           <label><%= tierListInfo.fileName %></label>
-          <div class="horizontalScrollDiv disableTextSelection scrollable">
+           <div class="horizontalScrollDiv disableTextSelection scrollable">
             <% tierListInfo.imgNames.forEach(function(imgName) { %>
             <img src="./imgSets/<%= tierListInfo.fileName %>/<%= imgName %>" />
             <% }) %>
           </div>
         </div>
-      </a>
+       </a>
       <% }) %>
-    </div>
+     </div>
     <!-- #endregion -->
 
     <!-- Footer container-->
