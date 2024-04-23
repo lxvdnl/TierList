@@ -1,6 +1,6 @@
 // #region handle horizontal scrolling of label without following link
 
-const scrollableDivs = document.querySelectorAll(".horizontalScrollDiv");
+const scrollableDivs = document.querySelectorAll(".horizontal-scroll-div");
 scrollableDivs.forEach((scrollableDiv) => {
   let isDown = false;
   let startX;

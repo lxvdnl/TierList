@@ -364,12 +364,12 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .footer-distributed .footer-left p {
-  color: #8f9296;
-  font-size: 14px;
+  color: #9e9e9e;
+  font-size: 16px;
   margin: 0;
 }
 
-.footer-distributed .footer-links {
+.footer-distributed p.footer-links {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -425,6 +425,17 @@ input::-webkit-calendar-picker-indicator {
 
 .footer-distributed p.footer-links a:hover {
   text-decoration: underline #ccc;
+}
+
+.fa {
+  display: inline-block;
+  font:
+    normal normal normal 14px/1 FontAwesome,
+    sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .fa-vk::before {
