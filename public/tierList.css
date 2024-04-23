@@ -8,15 +8,11 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: rgb(96, 157, 159);
+  background-color: rgb(96 157 159);
   text-align: center;
 }
 
 .disableTextSelection {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -27,7 +23,7 @@ body {
   flex: 1;
 }
 
-@media (max-width: 1170px) {
+@media (width <= 1170px) {
   .contentDiv {
     width: 90%;
   }
@@ -39,7 +35,7 @@ body {
   padding: 0 1%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 0px));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 0));
   grid-auto-flow: column;
   grid-auto-columns: minmax(100px, 1fr);
   overflow: scroll;
@@ -61,48 +57,48 @@ body {
   height: 100px;
   pointer-events: none;
   border-radius: 10px;
-  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px -2px rgb(0 0 0 / 40%);
 }
 
 .oneTierListSet label {
   font-size: 25px;
   margin-left: 40px;
-  color: rgb(211, 232, 230);
+  color: rgb(211 232 230);
   cursor: pointer;
 }
 
 .oneTierListSet {
   padding: 15px 2.7%;
   border-radius: 10px;
-  border: 1px solid rgb(73, 138, 129);
-  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(73 138 129);
+  box-shadow: 0 0 6px -2px rgb(0 0 0 / 40%);
   margin-top: 20px;
   cursor: pointer;
   text-align: left;
 }
 
 .oneTierListSet:hover {
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 6px 1px rgb(0 0 0 / 40%);
 }
 
 /* #endregion */
 
-/* #region  Create tier list content styles*/
+/* #region  Create tier list content styles */
 
 #createButton {
   width: 200px;
   border-radius: 10px;
   color: white;
   padding: 12px;
-  background-color: rgb(96, 157, 159);
-  border: 1px solid rgb(73, 138, 129);
-  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  background-color: rgb(96 157 159);
+  border: 1px solid rgb(73 138 129);
+  box-shadow: 0 0 6px -2px rgb(0 0 0 / 40%);
   cursor: pointer;
   font-size: 19px;
 }
 
 #createButton:hover {
-  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px -1px rgb(0 0 0 / 40%);
 }
 
 #uploadForm nav {
@@ -122,7 +118,7 @@ label[for="enterTierListName"] {
   font-size: 24px;
 }
 
-@media (max-width: 680px) {
+@media (width <= 680px) {
   label[for="enterTierListName"] {
     display: none;
   }
@@ -132,24 +128,24 @@ label[for="enterTierListName"] {
   width: 100%;
   text-align: center;
   outline: none;
-  background-color: rgb(186, 216, 218);
+  background-color: rgb(186 216 218);
   border-radius: 10px;
   padding: 4px 10px;
   border: 0;
   background: #dde4e6;
-  color: rgb(51, 50, 50);
+  color: rgb(51 50 50);
   font-size: 20px;
 }
 
 #enterTierListName:hover {
-  box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 9px -2px rgb(0 0 0 / 40%);
 }
 
 #dropArea {
-  background-color: rgb(123, 172, 174);
+  background-color: rgb(123 172 174);
   width: 100%;
   height: 200px;
-  border: 2px dashed rgb(73, 138, 129);
+  border: 2px dashed rgb(73 138 129);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -157,19 +153,19 @@ label[for="enterTierListName"] {
   margin: 25px 0;
   cursor: pointer;
   font-size: 25px;
-  color: rgb(226, 238, 236);
+  color: rgb(226 238 236);
   transition:
     background-color 0.8s ease,
     color 0.6s ease;
 }
 
 #dropArea:hover {
-  box-shadow: 0 0 7px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 7px -2px rgb(0 0 0 / 40%);
 }
 
 #dropArea.active {
-  background-color: rgb(96, 157, 159);
-  color: rgb(152, 169, 168);
+  background-color: rgb(96 157 159);
+  color: rgb(152 169 168);
 }
 
 .createTierListForm {
@@ -180,20 +176,20 @@ label[for="enterTierListName"] {
   padding: 40px;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid rgb(73, 138, 129);
-  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(73 138 129);
+  box-shadow: 0 0 6px -2px rgb(0 0 0 / 40%);
   color: white;
   width: 100%;
   max-width: 800px;
 }
 
-@media (max-width: 960px) {
+@media (width <= 960px) {
   .createTierListForm {
     width: auto;
   }
 }
 
-@media (max-width: 260px) {
+@media (width <= 260px) {
   #createButton {
     width: auto;
     font-size: 15px;
@@ -202,12 +198,12 @@ label[for="enterTierListName"] {
 
   #dropArea {
     font-size: 15px;
-    color: rgb(226, 238, 236);
+    color: rgb(226 238 236);
     transition: background-color 0.8s ease;
   }
 }
 
-@media (max-width: 170px) {
+@media (width <= 170px) {
   #dropArea {
     font-size: 0;
   }
@@ -223,20 +219,20 @@ label[for="enterTierListName"] {
   border-radius: 10px;
   color: white;
   padding: 15px;
-  background-color: rgb(96, 157, 159);
-  border: 1px solid rgb(73, 138, 129);
-  box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+  background-color: rgb(96 157 159);
+  border: 1px solid rgb(73 138 129);
+  box-shadow: 0 0 6px -2px rgb(0 0 0 / 40%);
   cursor: pointer;
   font-size: 19px;
 }
 
 #goToTierList:hover {
-  box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px -1px rgb(0 0 0 / 40%);
 }
 
 /* #endregion */
 
-/* #region  Help content styles*/
+/* #region  Help content styles */
 
 #helpTextAreaDiv {
   width: 100%;
@@ -253,7 +249,7 @@ label[for="enterTierListName"] {
 /* #region Menu styles */
 
 .menuNav {
-  background-color: rgb(73, 138, 129);
+  background-color: rgb(73 138 129);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,12 +257,12 @@ label[for="enterTierListName"] {
   padding: 12px 50px;
   font-size: 20px;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px -2px rgb(0 0 0 / 40%);
 }
 
 .menuNav:hover {
   cursor: default;
-  box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 9px -2px rgb(0 0 0 / 40%);
 }
 
 .menuTitle {
@@ -282,7 +278,7 @@ label[for="enterTierListName"] {
   margin: 0;
 }
 
-@media (max-width: 470px) {
+@media (width <= 470px) {
   .menuList {
     display: none;
   }
@@ -323,21 +319,21 @@ label[for="enterTierListName"] {
   border-radius: 6px;
   padding: 4px 10px;
   border: 0;
-  background: #ffffff !important;
+  background: #fff !important;
   outline: none;
   text-align: center;
   margin-right: 8px;
 }
 
 .inputChoiseSearchButton {
-  background-color: rgb(73, 138, 129);
+  background-color: rgb(73 138 129);
   border: none;
   color: white;
   font-size: 19px;
   cursor: pointer;
 }
 
-@media (max-width: 720px) {
+@media (width <= 720px) {
   .inputChoise,
   .inputChoiseSearchButton {
     display: none;
@@ -354,7 +350,7 @@ input::-webkit-calendar-picker-indicator {
 
 .footerDistributed {
   background-color: #292c2f;
-  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 10px -2px rgb(0 0 0 / 40%);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
@@ -377,7 +373,7 @@ input::-webkit-calendar-picker-indicator {
 .footerDistributed p.footerLinks {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   margin: 0 0 10px;
   padding: 0;
   transition: ease 0.25s;
@@ -391,7 +387,7 @@ input::-webkit-calendar-picker-indicator {
   transition: ease 0.25s;
 }
 
-.footerDistributed .footerLinks a:before {
+.footerDistributed .footerLinks a::before {
   content: "·";
   font-size: 20px;
   left: 0;
@@ -400,7 +396,7 @@ input::-webkit-calendar-picker-indicator {
   padding-right: 5px;
 }
 
-.footerDistributed .footerLinks .footerFirstLink:before {
+.footerDistributed .footerLinks .footerFirstLink::before {
   content: none;
 }
 
@@ -417,7 +413,7 @@ input::-webkit-calendar-picker-indicator {
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   line-height: 35px;
   margin-left: 3px;
@@ -426,7 +422,7 @@ input::-webkit-calendar-picker-indicator {
 
 .footerDistributed .footerRight a:hover {
   transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .footerDistributed p.footerLinks a:hover {
@@ -442,11 +438,11 @@ input::-webkit-calendar-picker-indicator {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.faVk:before {
+.faVk::before {
   content: "\f189";
 }
 
-.faGithub:before {
+.faGithub::before {
   content: "\f09b";
 }
 
