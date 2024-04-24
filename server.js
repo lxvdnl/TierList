@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-app.get(/", function (req, res) {
+app.get("/", function (req, res) {
   const allTierListsInfo = getSubfoldersNameAndImgNames("./public/imgSets");
   res.render("homePage.html", {
     allTierListsInfo: allTierListsInfo,
