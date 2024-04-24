@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  check_server:
+  check-server:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,7 +21,7 @@ jobs:
 
       - name: Start server and check
         run: |
-        node server.js &
+        node server.js
         sleep 5 # Подождать несколько секунд для запуска сервера
         if curl --output /dev/null --silent --head --fail http://localhost:3000; then
           echo "Server is running"
