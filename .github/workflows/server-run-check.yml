@@ -22,7 +22,13 @@ jobs:
           npm install
       - name: Start server and check
         run: |
-          node server.js
+          node server.js &
+          echo "Waiting for the server to start..."
+          until curl -sSf http://localhost:3000; do
+            echo "Server is not yet available. Retrying..."
+            sleep 5
+          done
+          echo "Server is running."
       - name: Stop server
         run: |
           kill $(lsof -t -i:3000)
