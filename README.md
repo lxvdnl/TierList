@@ -15,3 +15,4 @@ To run the server use:
   node server.js
   ```  
 If the server run without errors, then copy the link from the terminal and paste it into the browser search
+![Home page](website-home-page.png)
