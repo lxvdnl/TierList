@@ -14,5 +14,6 @@ To run the server use:
   ```
   node server.js
   ```  
-If the server run without errors, then copy the link from the terminal and paste it into the browser search
+If the server run without errors, then copy the link from the terminal and paste it into the browser search.
+Then you should get to a page like this:  
 ![Home page](website-home-page.png)
