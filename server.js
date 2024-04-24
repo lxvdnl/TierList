@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-app.get(/", function (req, res) {
+app.get("/", function (req, res) {
   const allTierListsInfo = getSubfoldersNameAndImgNames("./public/imgSets");
   res.render("homePage.html", {
     allTierListsInfo: allTierListsInfo,
@@ -76,8 +76,12 @@ app.post("/tierListCreated", upload.array("imgSet"), function (req, res) {
   });
 });
 
-app.listen(port, hostName, () => {
-  console.log(`Сервер запущен на http://${hostName}:${port}`);
+app.listen(port, hostName, (err) => {
+  if (err) {
+    console.error('Error when starting the server: ', err);
+    process.exit(1);
+  }
+  console.log(`The server is running on http://${hostName}:${port}`);
 });
 
 function getSubfoldersNameAndImgNames(path) {
