@@ -1,2 +1,5 @@
 node_modules/
 package-lock.json
+ImgSets/*
+!ImgSets/dark\ pics/
+!ImgSets/snow\ pics/
